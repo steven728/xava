@@ -1,0 +1,32 @@
+= Xava util project
+
+== Install bundles
+
+=== Util bundles
+
+	install mvn:io.roxa.xava/xava-util/0.0.1-SNAPSHOT
+	install -s mvn:io.roxa.xava/xava-vertx-launcher/0.0.1-SNAPSHOT
+	
+=== Demo bundles
+
+	install -s mvn:io.roxa.xava/angular-hero-api/0.0.1-SNAPSHOT
+	
+== Maven Dependency
+
+[source,xml]
+----
+<dependency>
+	<groupId>io.roxa.xava</groupId>
+	<artifactId>xava-util</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+</dependency>
+<dependency>
+	<groupId>io.roxa.xava</groupId>
+	<artifactId>xava-vertx-launcher</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+</dependency>
+----
+	
+== An AbstractBootVerticle Usage
+
+* Extends from `AbstractBootVerticle`

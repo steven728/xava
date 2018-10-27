@@ -1,0 +1,179 @@
+<ul class="nav nav-tabs">
+	<li role="presentation"><a href="#/!">服务组件运行概要</a></li>
+	<li role="presentation" class="active"><a href="#!metrics">服务组件运行期指标</a></li>
+	<li role="presentation"><a href="#!discovery">微服务发现</a></li>
+</ul>
+<table class="table table-condensed">
+	<thead>
+		<tr>
+			<th style="width: 30px;"></th>
+			<th>指标</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat-start="metric in metrics">
+			<td>
+				<button ng-if="metric.expanded" ng-click="metric.expanded = false">-</button>
+				<button ng-if="!metric.expanded" ng-click="expandSelected(metric)">+</button>
+			</td>
+			<td>{{metric.id}}</td>
+		</tr>
+		<tr ng-if="metric.expanded" ng-repeat-end="">
+			<td colspan="3">
+				<div ng-switch="metric.snapshot.type">
+					<div ng-switch-when="counter">Count: {{metric.snapshot.count}}</div>
+					<div ng-switch-when="gauge">{{metric.snapshot.value}}</div>
+					<div ng-switch-when="meter">
+						<table class="table table-condensed">
+							<tr>
+								<td>onSecondRate</td>
+								<td>{{metric.snapshot.onSecondRate}}</td>
+							</tr>
+							<tr>
+								<td>count</td>
+								<td>{{metric.snapshot.count}}</td>
+							</tr>
+							<tr>
+								<td>meanRate</td>
+								<td>{{metric.snapshot.meanRate}}</td>
+							</tr>
+							<tr>
+								<td>fiveMinuteRate</td>
+								<td>{{metric.snapshot.fiveMinuteRate}}</td>
+							</tr>
+							<tr>
+								<td>fifteenMinuteRate</td>
+								<td>{{metric.snapshot.fifteenMinuteRate}}</td>
+							</tr>
+							<tr>
+								<td>rate</td>
+								<td>{{metric.snapshot.rate}}</td>
+							</tr>
+						</table>
+					</div>
+					<div ng-switch-when="timer">
+						<table class="table table-condensed">
+							<tr>
+								<td>onSecondRate</td>
+								<td>{{metric.snapshot.onSecondRate}}</td>
+							</tr>
+							<tr>
+								<td>count</td>
+								<td>{{metric.snapshot.count}}</td>
+							</tr>
+							<tr>
+								<td>meanRate</td>
+								<td>{{metric.snapshot.meanRate}}</td>
+							</tr>
+							<tr>
+								<td>fiveMinuteRate</td>
+								<td>{{metric.snapshot.fiveMinuteRate}}</td>
+							</tr>
+							<tr>
+								<td>fifteenMinuteRate</td>
+								<td>{{metric.snapshot.fifteenMinuteRate}}</td>
+							</tr>
+							<tr>
+								<td>rate</td>
+								<td>{{metric.snapshot.rate}}</td>
+							</tr>
+							<tr>
+								<td>min</td>
+								<td>{{metric.snapshot.min}}</td>
+							</tr>
+							<tr>
+								<td>max</td>
+								<td>{{metric.snapshot.max}}</td>
+							</tr>
+							<tr>
+								<td>mean</td>
+								<td>{{metric.snapshot.mean}}</td>
+							</tr>
+							<tr>
+								<td>stddev</td>
+								<td>{{metric.snapshot.stddev}}</td>
+							</tr>
+							<tr>
+								<td>median</td>
+								<td>{{metric.snapshot.median}}</td>
+							</tr>
+							<tr>
+								<td>75%</td>
+								<td>{{metric.snapshot.percentile75}}</td>
+							</tr>
+							<tr>
+								<td>95%</td>
+								<td>{{metric.snapshot.percentile95}}</td>
+							</tr>
+							<tr>
+								<td>98%</td>
+								<td>{{metric.snapshot.percentile98}}</td>
+							</tr>
+							<tr>
+								<td>99%</td>
+								<td>{{metric.snapshot.percentile99}}</td>
+							</tr>
+							<tr>
+								<td>99.9%</td>
+								<td>{{metric.snapshot.percentile999}}</td>
+							</tr>
+							<tr>
+								<td>durationRate</td>
+								<td>{{metric.snapshot.durationRate}}</td>
+							</tr>
+						</table>
+					</div>
+					<div ng-switch-when="histogram">
+						<table class="table table-condensed">
+							<tr>
+								<td>count</td>
+								<td>{{metric.snapshot.count}}</td>
+							</tr>
+							<tr>
+								<td>min</td>
+								<td>{{metric.snapshot.min}}</td>
+							</tr>
+							<tr>
+								<td>max</td>
+								<td>{{metric.snapshot.max}}</td>
+							</tr>
+							<tr>
+								<td>mean</td>
+								<td>{{metric.snapshot.mean}}</td>
+							</tr>
+							<tr>
+								<td>stddev</td>
+								<td>{{metric.snapshot.stddev}}</td>
+							</tr>
+							<tr>
+								<td>median</td>
+								<td>{{metric.snapshot.median}}</td>
+							</tr>
+							<tr>
+								<td>75%</td>
+								<td>{{metric.snapshot.percentile75}}</td>
+							</tr>
+							<tr>
+								<td>95%</td>
+								<td>{{metric.snapshot.percentile95}}</td>
+							</tr>
+							<tr>
+								<td>98%</td>
+								<td>{{metric.snapshot.percentile98}}</td>
+							</tr>
+							<tr>
+								<td>99%</td>
+								<td>{{metric.snapshot.percentile99}}</td>
+							</tr>
+							<tr>
+								<td>99.9%</td>
+								<td>{{metric.snapshot.percentile999}}</td>
+							</tr>
+						</table>
+					</div>
+					<div ng-switch-default>{{metric.snapshot}}</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

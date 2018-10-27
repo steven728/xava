@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xava-jqm" />
+        <module name="xava-util" />
+        <module name="xava-vertx-base" />
+        <module name="xava-vertx-boot" />
+        <module name="xava-vertx-cluster" />
+        <module name="xava-vertx-extender" />
+        <module name="xava-vertx-launcher" />
+        <module name="xava-vertx-monitor" />
+        <module name="xava-vertx-mysql" />
+        <module name="xava-vertx-redis" />
+        <module name="xava-vertx-rx" />
+        <module name="xava-vertx-sample" />
+        <module name="xava-vertx-sample-proxy" />
+        <module name="xava-vertx-sybase" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xava" target="1.8" />
+      <module name="xava-jqm" target="1.8" />
+      <module name="xava-util" target="1.8" />
+      <module name="xava-vertx-base" target="1.8" />
+      <module name="xava-vertx-boot" target="1.8" />
+      <module name="xava-vertx-cluster" target="1.8" />
+      <module name="xava-vertx-extender" target="1.8" />
+      <module name="xava-vertx-launcher" target="1.8" />
+      <module name="xava-vertx-monitor" target="1.8" />
+      <module name="xava-vertx-mysql" target="1.8" />
+      <module name="xava-vertx-redis" target="1.8" />
+      <module name="xava-vertx-rx" target="1.8" />
+      <module name="xava-vertx-sample" target="1.8" />
+      <module name="xava-vertx-sample-proxy" target="1.8" />
+      <module name="xava-vertx-sybase" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

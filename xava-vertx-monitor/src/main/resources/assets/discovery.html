@@ -1,0 +1,29 @@
+<ul class="nav nav-tabs">
+	<li role="presentation"><a href="#/!">服务组件运行概要</a></li>
+	<li role="presentation"><a href="#!metrics">服务组件运行期指标</a></li>
+	<li role="presentation" class="active"><a href="#!discovery">微服务发现</a></li>
+</ul>
+<table class="table table-condensed">
+	<thead>
+		<tr>
+		  <th>Service name</th>
+			<th>Endpoint</th>
+			<th>Host Port</th>
+			<th>Context Path</th>
+			<th>Registration ID</th>
+			<th>Status</th>
+			<th>Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="info in discoveryInfo">
+		  <td>{{info.name}}</td>
+		  <td>{{info.location.endpoint}}</td>
+		  <td>{{info.location.host}}:{{info.location.port}}</td>
+		  <td>{{info.location.root}}</td>
+		  <td>{{info.registration}}</td>
+		  <td>{{info.status}}</td>
+		  <td>{{info.type}}</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,49 @@
+<ul class="nav nav-tabs">
+	<li role="presentation" class="active"><a href="#/!">微服务组件运行概要</a></li>
+	<li role="presentation"><a href="#!metrics">微服务组件运行期指标</a></li>
+	<li role="presentation"><a href="#!discovery">微服务发现</a></li>
+</ul>
+<table class="table table-condensed">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Identifier</th>
+			<th>Options</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="verticle in verticles">
+			<td>{{verticle.id}}</td>
+			<td>{{verticle.identifier}}</td>
+			<td>
+				<table class="table table-condensed">
+					<tr>
+						<td><label>高可用(HA):</label></td>
+						<td>{{verticle.options.ha}}</td>
+					</tr>
+					<tr>
+						<td><label>运行期实例(Instances):</label></td>
+						<td>{{verticle.options.instances}}</td>
+					</tr>
+					<tr>
+						<td><label>最大工作执行时间(Max Worker Execution Time):</label></td>
+						<td>{{verticle.options.maxWorkerExecutionTime}}</td>
+					</tr>
+					<tr>
+						<td><label>多线和模式(Multi Threaded):</label></td>
+						<td>{{verticle.options.multiThreaded}}
+							{{verticle.options.multiThreaded}}</td>
+					</tr>
+					<tr>
+						<td><label>工作线程(Worker):</label></td>
+						<td>{{verticle.options.worker}}</td>
+					</tr>
+					<tr>
+						<td><label>工作线程池(Worker Pool Size):</label></td>
+						<td>{{verticle.options.workerPoolSize}}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>

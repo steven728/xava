@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+	xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd">
+
+	<cm:property-placeholder
+		persistent-id="io.roxa.redis" update-strategy="reload">
+		<cm:default-properties>
+			<cm:property name="redisHost" value="redisd" />
+		</cm:default-properties>
+	</cm:property-placeholder>
+
+	<bean id="vertxLauncher"
+		class="io.roxa.xava.vertx.internal.VertxLauncher" init-method="start"
+		destroy-method="stop" activation="eager">
+		<property name="bundleContext" ref="blueprintBundleContext" />
+	</bean>
+
+	<service auto-export="interfaces" activation="eager">
+		<bean class="io.roxa.xava.vertx.internal.ServicePublisher">
+		  <property name="redisHost" value="${redisHost}"/>
+		</bean>
+	</service>
+
+</blueprint>

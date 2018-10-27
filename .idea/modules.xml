@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xava.iml" filepath="$PROJECT_DIR$/xava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-jqm/xava-jqm.iml" filepath="$PROJECT_DIR$/xava-jqm/xava-jqm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-util/xava-util.iml" filepath="$PROJECT_DIR$/xava-util/xava-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-base/xava-vertx-base.iml" filepath="$PROJECT_DIR$/xava-vertx-base/xava-vertx-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-boot/xava-vertx-boot.iml" filepath="$PROJECT_DIR$/xava-vertx-boot/xava-vertx-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-cluster/xava-vertx-cluster.iml" filepath="$PROJECT_DIR$/xava-vertx-cluster/xava-vertx-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-extender/xava-vertx-extender.iml" filepath="$PROJECT_DIR$/xava-vertx-extender/xava-vertx-extender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-launcher/xava-vertx-launcher.iml" filepath="$PROJECT_DIR$/xava-vertx-launcher/xava-vertx-launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-monitor/xava-vertx-monitor.iml" filepath="$PROJECT_DIR$/xava-vertx-monitor/xava-vertx-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-mysql/xava-vertx-mysql.iml" filepath="$PROJECT_DIR$/xava-vertx-mysql/xava-vertx-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-redis/xava-vertx-redis.iml" filepath="$PROJECT_DIR$/xava-vertx-redis/xava-vertx-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-rx/xava-vertx-rx.iml" filepath="$PROJECT_DIR$/xava-vertx-rx/xava-vertx-rx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-sample/xava-vertx-sample.iml" filepath="$PROJECT_DIR$/xava-vertx-sample/xava-vertx-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-sample-proxy/xava-vertx-sample-proxy.iml" filepath="$PROJECT_DIR$/xava-vertx-sample-proxy/xava-vertx-sample-proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xava-vertx-sybase/xava-vertx-sybase.iml" filepath="$PROJECT_DIR$/xava-vertx-sybase/xava-vertx-sybase.iml" />
+    </modules>
+  </component>
+</project>
